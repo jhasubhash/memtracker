@@ -4,6 +4,8 @@ uint32_t totalSize = 0;
 
 void * operator new(std::size_t size){
     void * mem = std::malloc(sizeof(size_t) + size);
+    if(mem == nullptr)
+        return mem;
     *(size_t*)mem = size;
     totalSize += size + sizeof(size_t);
     return (void*)&((size_t*)mem)[1];

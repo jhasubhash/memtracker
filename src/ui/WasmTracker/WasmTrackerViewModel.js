@@ -5,9 +5,9 @@ export default class WasmTrackerViewModel {
     
     startAllocation(wasm, showAlert){
         let size_in_mb = 10;
-        try{
-            wasm.tryAllocationToWasm(size_in_mb);
-        }catch(err){
+        let success = false;
+        success = wasm.tryAllocationToWasm(size_in_mb);
+        if(!success){
             console.log("wasm out of memory");
             showAlert();
             return;

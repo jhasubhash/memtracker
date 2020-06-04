@@ -19,8 +19,11 @@ EMSCRIPTEN_BINDINGS(ClassBinding) {
     ;
 }
 
-void tryAllocationToWasmFromJS(int size_in_mb){
+bool tryAllocationToWasmFromJS(int size_in_mb){
     char* ptr = new char[size_in_mb*1024*1024];
+    if(ptr == nullptr)
+        return false;
+    return true;
     // std::cout<<"wasm size :"<<memory_manager::getWasmMemorySize()<<std::endl;
     // delete[] ptr; 
 }
