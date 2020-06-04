@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/memtracker/static/css/main.be492879.chunk.css",
+    "main.css": "/memtracker/static/css/main.ef2169b2.chunk.css",
     "main.js": "/memtracker/static/js/main.1de73fe9.chunk.js",
     "main.js.map": "/memtracker/static/js/main.1de73fe9.chunk.js.map",
     "runtime-main.js": "/memtracker/static/js/runtime-main.5669ab9a.js",
@@ -8,16 +8,16 @@
     "static/js/2.59665bd1.chunk.js": "/memtracker/static/js/2.59665bd1.chunk.js",
     "static/js/2.59665bd1.chunk.js.map": "/memtracker/static/js/2.59665bd1.chunk.js.map",
     "index.html": "/memtracker/index.html",
-    "precache-manifest.ec27034ef793a3456eb06f9dad6f0cd6.js": "/memtracker/precache-manifest.ec27034ef793a3456eb06f9dad6f0cd6.js",
+    "precache-manifest.d80b70c372780c2c42ad5457e856002e.js": "/memtracker/precache-manifest.d80b70c372780c2c42ad5457e856002e.js",
     "service-worker.js": "/memtracker/service-worker.js",
-    "static/css/main.be492879.chunk.css.map": "/memtracker/static/css/main.be492879.chunk.css.map",
+    "static/css/main.ef2169b2.chunk.css.map": "/memtracker/static/css/main.ef2169b2.chunk.css.map",
     "static/js/2.59665bd1.chunk.js.LICENSE.txt": "/memtracker/static/js/2.59665bd1.chunk.js.LICENSE.txt",
     "static/js/app.wasm": "/memtracker/static/js/app.wasm"
   },
   "entrypoints": [
     "static/js/runtime-main.5669ab9a.js",
     "static/js/2.59665bd1.chunk.js",
-    "static/css/main.be492879.chunk.css",
+    "static/css/main.ef2169b2.chunk.css",
     "static/js/main.1de73fe9.chunk.js"
   ]
 }
