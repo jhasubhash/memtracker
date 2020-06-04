@@ -16,7 +16,7 @@ export default function SimpleAlerts() {
 
   return (
     <div className={classes.root}>
-      <Alert severity="error">WASM has run out of memory</Alert>
+      <Alert severity="error" variant="filled">WASM has run out of memory</Alert>
     </div>
   );
 }
