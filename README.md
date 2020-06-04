@@ -1,8 +1,13 @@
-## TO BUILD WASM
-set emscripten compiler path in build.sh
+## TO BUILD
+
+> set emscripten compiler path in build.sh
+
+> npm run build
 
 ## TO RUN LOCALLY
 
+> npm start
 
 ## TO DEPLOY
-npm run deploy
+
+> npm run deploy

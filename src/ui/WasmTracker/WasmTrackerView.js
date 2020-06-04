@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 export default class DashboardView extends React.Component {
     constructor(props) {
         super(props);
-        this.wasmSizeLimit  = 4000; //size in MB
+        this.wasmSizeLimit  = 6000; //size in MB
         this.wasmTrackerViewModel = new WasmTrackerViewModel();
         this.state = {
             wasmSize : 0,
