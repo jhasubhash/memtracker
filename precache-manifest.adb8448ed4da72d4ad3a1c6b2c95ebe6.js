@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b4975af1b27e135f91e55e3169e0674b",
+    "revision": "b0234f87496adfeddb1cc2e7f7af732f",
     "url": "/memtracker/index.html"
   },
   {
-    "revision": "d5f4537d03cb7ca92f20",
+    "revision": "b2da3e8bb85d2ec12cf5",
     "url": "/memtracker/static/css/main.afb1a7fc.chunk.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/memtracker/static/js/2.59665bd1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "841d9ffb6345f9a6f4ae12d8833846fd",
+    "revision": "e60a3fd540659fdcc5b61f424b0b2f41",
     "url": "/memtracker/static/js/app.wasm"
   },
   {
-    "revision": "d5f4537d03cb7ca92f20",
-    "url": "/memtracker/static/js/main.9b0dd794.chunk.js"
+    "revision": "b2da3e8bb85d2ec12cf5",
+    "url": "/memtracker/static/js/main.bc743d7f.chunk.js"
   },
   {
     "revision": "0bcefe877da3c722f4b6",
