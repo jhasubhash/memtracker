@@ -1,5 +1,4 @@
 import React from 'react';
-import { observable, computed, decorate } from "mobx"
 import DashboardViewModel from './DashboardViewModel';
 import WasmTrackerView from '../WasmTracker/WasmTrackerView';
 import './DashboardView.css'
@@ -19,9 +18,7 @@ export default class DashboardView extends React.Component {
     }
 
     setWasmRef = (ref) => {
-        // this.wasmRef = ref;
         this.setState({wasmRef:ref});
-        // this.forceUpdate();
     }
 
     render(){
@@ -30,7 +27,3 @@ export default class DashboardView extends React.Component {
         </div>
     }
 }
-
-decorate(DashboardView, {
-    wasmRef: observable
-})
