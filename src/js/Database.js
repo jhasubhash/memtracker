@@ -1,6 +1,5 @@
-const firebase = require("firebase");
-// Required for side-effects
-require("firebase/firestore");
+import firebase from 'firebase/app';
+import 'firebase/firestore'; 
 let UAParser = require('ua-parser-js');
 let isEqual = require('lodash.isequal');
 
@@ -57,12 +56,11 @@ class Database {
             let dataArr = [];
             querySnapshot.forEach((doc) => {
                 dataArr.push(doc.data());
-                console.log(`${doc.id} => ${doc.data()}`);
             })
             return dataArr;
         }).then((dataArr) => {
                 let idx = this.isDataPresent(dataArr, this.info);
-                if(idx == -1){//data is not already present
+                if(idx === -1){//data is not already present
                     this.db.collection("info").add(this.info)
                     dataArr.unshift(this.info);
                     console.log("adding new data to DB");
