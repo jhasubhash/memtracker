@@ -79,6 +79,12 @@ class Database {
 
     }
 
+    getCurrent(){
+        let dataArr = [];
+        dataArr.push(this.info);
+        return dataArr;
+    }
+    
     async get(){
         return await this.db.collection("info").get();
         /*.then((querySnapshot) => {

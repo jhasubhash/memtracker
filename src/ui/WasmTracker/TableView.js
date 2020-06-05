@@ -47,7 +47,7 @@ export default class TableView extends React.Component  {
     }
 
     renderData(dataArr){
-        let data = [];
+        let currData = [];
         for(let idx = 0; idx <dataArr.length; idx++){
             let item = dataArr[idx];
             let currItem = {};
@@ -58,9 +58,9 @@ export default class TableView extends React.Component  {
             currItem.device_model = item.device.model;
             currItem.device_type = item.device.type;
             currItem.wasm_memory = item.wasmMemory;
-            data.push(currItem);
+            currData.push(currItem);
         }
-        let columns = [
+        let currColumns = [
             { title: 'Browser', field: 'browser_name', width:50, minWidth: 50 },
             { title: 'Version', field: 'browser_version', width:100  },
             { title: 'OS', field: 'os_name', width:100  },
@@ -69,15 +69,18 @@ export default class TableView extends React.Component  {
             { title: 'Device Type', field: 'device_type', cellStyle: { whiteSpace: 'nowrap' } },
             { title: 'WASM Memory (MB)', field: 'wasm_memory', cellStyle: { whiteSpace: 'nowrap' }  },
         ]
-        this.state.columns = columns;
-        this.state.data = data;
+        this.setState({columns:currColumns});
+        this.setState({data:currData});
     }
 
     render(){
         return <div style={{ maxWidth: '100%' }}>
             <MaterialTable
                 icons={tableIcons}
-                title="Device and Browser Info"
+                options={{
+                    paginationType : "stepped",
+                }}
+                title="All Devices and Browsers Info"
                 columns={this.state.columns}
                 data={this.state.data}
             />

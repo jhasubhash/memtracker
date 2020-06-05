@@ -6,6 +6,7 @@ import AlertView from './AlertView'
 import Typography from '@material-ui/core/Typography';
 import DB from '../../js/Database';
 import TableView from './TableView';
+import RowView from './RowView';
 
 export default class DashboardView extends React.Component {
     constructor(props) {
@@ -15,7 +16,8 @@ export default class DashboardView extends React.Component {
         this.state = {
             wasmSize : 0,
             alertActive : false,
-            tableActive : false
+            tableActive : false,
+            rowActive : false
         }
     }
 
@@ -31,7 +33,9 @@ export default class DashboardView extends React.Component {
 
     showAlert = () => {
         this.setState({alertActive:true});
+        this.setState({rowActive:true});
         DB.add(this.state.wasmSize.toFixed(2), this.onDBData);
+        this.refs.rowView.renderData(DB.getCurrent());
     }
 
     onDBData = (data) => {
@@ -40,6 +44,7 @@ export default class DashboardView extends React.Component {
     }
 
     fetchWasmSize = () => {
+        if(this.state.rowActive) return;
         let currWasmSize = this.wasmTrackerViewModel.getWasmSize(this.props.wasm);
         currWasmSize = currWasmSize/(1024*1024);
         this.setState({wasmSize:currWasmSize});
@@ -61,6 +66,9 @@ export default class DashboardView extends React.Component {
             </div>
             <div className="alert">
             { this.state.alertActive && <AlertView/>}
+            </div>
+            <div className="table">
+            {this.state.rowActive && <RowView ref="rowView"/>}
             </div>
             <div className="table">
             { this.state.tableActive && <TableView ref="table"/>}
