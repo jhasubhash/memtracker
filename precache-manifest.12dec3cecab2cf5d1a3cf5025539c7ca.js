@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6238f39bd252d323ba590380f5a474ce",
+    "revision": "7da1c5a417a55ffda238937ae32bb9d6",
     "url": "/memtracker/index.html"
   },
   {
-    "revision": "b00fd349eba952ce3fb4",
+    "revision": "3491699e02123168957a",
     "url": "/memtracker/static/css/main.84e6a5b7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/memtracker/static/js/app.wasm"
   },
   {
-    "revision": "b00fd349eba952ce3fb4",
-    "url": "/memtracker/static/js/main.e7e8ba32.chunk.js"
+    "revision": "3491699e02123168957a",
+    "url": "/memtracker/static/js/main.e5c09a0b.chunk.js"
   },
   {
     "revision": "0bcefe877da3c722f4b6",
