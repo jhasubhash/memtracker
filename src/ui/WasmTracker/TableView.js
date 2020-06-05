@@ -67,7 +67,7 @@ export default class TableView extends React.Component  {
             { title: 'Version', field: 'os_version', width:100  },
             { title: 'Device Model', field: 'device_model', cellStyle: { whiteSpace: 'nowrap' } },
             { title: 'Device Type', field: 'device_type', cellStyle: { whiteSpace: 'nowrap' } },
-            { title: 'WASM Memory (MB)', field: 'wasm_memory', cellStyle: { whiteSpace: 'nowrap' }  },
+            { title: 'WASM Memory (MB)', field: 'wasm_memory', type: 'numeric', cellStyle: { whiteSpace: 'nowrap' }  },
         ]
         this.setState({columns:currColumns});
         this.setState({data:currData});
