@@ -1,8 +1,6 @@
 
 export default class WasmTrackerViewModel {
-    constructor() {
-    }
-    
+
     startAllocation(wasm, showAlert){
         let size_in_mb = 10;
         let success = false;

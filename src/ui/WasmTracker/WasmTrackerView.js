@@ -19,6 +19,8 @@ export default class DashboardView extends React.Component {
             tableActive : false,
             rowActive : false
         }
+        this.rowRef = React.createRef();
+        this.tableRef = React.createRef();
     }
 
     componentDidMount() {
@@ -35,12 +37,12 @@ export default class DashboardView extends React.Component {
         this.setState({alertActive:true});
         this.setState({rowActive:true});
         DB.add(this.state.wasmSize.toFixed(2), this.onDBData);
-        this.refs.rowView.renderData(DB.getCurrent());
+        this.rowRef.current.renderData(DB.getCurrent());
     }
 
     onDBData = (data) => {
         this.setState({tableActive:true});
-        this.refs.table.renderData(data);
+        this.tableRef.current.renderData(data);
     }
 
     fetchWasmSize = () => {
@@ -68,10 +70,10 @@ export default class DashboardView extends React.Component {
             { this.state.alertActive && <AlertView/>}
             </div>
             <div className="table">
-            {this.state.rowActive && <RowView ref="rowView"/>}
+            {this.state.rowActive && <RowView ref={this.rowRef} />}
             </div>
             <div className="table">
-            { this.state.tableActive && <TableView ref="table"/>}
+            { this.state.tableActive && <TableView ref={this.tableRef} />}
             </div>
         </div>
     }

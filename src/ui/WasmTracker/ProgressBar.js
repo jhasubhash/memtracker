@@ -27,7 +27,7 @@ export default function LinearDeterminate(props) {
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [props]);
 
   return (
     <div className={classes.root}>
