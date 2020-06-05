@@ -21,7 +21,7 @@ export default class RowView extends React.Component  {
             currItem.os_version = item.os.version;
             currItem.device_model = item.device.model;
             currItem.device_type = item.device.type;
-            currItem.wasm_memory = item.wasmMemory;
+            currItem.wasm_memory = parseInt(item.wasmMemory);
             currData.push(currItem);
         }
         let currColumns = [
@@ -31,7 +31,7 @@ export default class RowView extends React.Component  {
             { title: 'Version', field: 'os_version', width:100  },
             { title: 'Device Model', field: 'device_model', cellStyle: { whiteSpace: 'nowrap' } },
             { title: 'Device Type', field: 'device_type', cellStyle: { whiteSpace: 'nowrap' } },
-            { title: 'WASM Memory (MB)', field: 'wasm_memory', cellStyle: { whiteSpace: 'nowrap' }  },
+            { title: 'WASM Memory (MB)', field: 'wasm_memory', type: 'numeric', cellStyle: { whiteSpace: 'nowrap', textAlign: "center" }  },
         ]
         this.setState({columns:currColumns});
         this.setState({data:currData});
