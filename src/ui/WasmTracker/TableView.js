@@ -61,7 +61,7 @@ export default class TableView extends React.Component  {
             currData.push(currItem);
         }
         let currColumns = [
-            { title: 'Browser', field: 'browser_name', width:50, minWidth: 50 },
+            { title: 'Browser', field: 'browser_name', cellStyle: { whiteSpace: 'nowrap' } },
             { title: 'Version', field: 'browser_version', width:100  },
             { title: 'OS', field: 'os_name', width:100  },
             { title: 'Version', field: 'os_version', width:100  },
