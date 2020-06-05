@@ -4,6 +4,8 @@ import WasmTrackerViewModel from './WasmTrackerViewModel'
 import ProgressBar from './ProgressBar'
 import AlertView from './AlertView'
 import Typography from '@material-ui/core/Typography';
+import DB from '../../js/Database';
+import TableView from './TableView';
 
 export default class DashboardView extends React.Component {
     constructor(props) {
@@ -12,13 +14,15 @@ export default class DashboardView extends React.Component {
         this.wasmTrackerViewModel = new WasmTrackerViewModel();
         this.state = {
             wasmSize : 0,
-            alertActive : false
+            alertActive : false,
+            tableActive : false
         }
     }
 
     componentDidMount() {
         this.fetchWasmSize();
         this.handleStartClick();
+        DB.initDatabase();
     }
 
     handleStartClick = () => {
@@ -27,6 +31,12 @@ export default class DashboardView extends React.Component {
 
     showAlert = () => {
         this.setState({alertActive:true});
+        DB.add(this.state.wasmSize.toFixed(2), this.onDBData);
+    }
+
+    onDBData = (data) => {
+        this.setState({tableActive:true});
+        this.refs.table.renderData(data);
     }
 
     fetchWasmSize = () => {
@@ -51,6 +61,9 @@ export default class DashboardView extends React.Component {
             </div>
             <div className="alert">
             { this.state.alertActive && <AlertView/>}
+            </div>
+            <div className="table">
+            { this.state.tableActive && <TableView ref="table"/>}
             </div>
         </div>
     }
